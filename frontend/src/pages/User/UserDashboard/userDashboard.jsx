@@ -1,7 +1,7 @@
 import MobileNavBar from '../MobileNavBar/MobileNavBar';
 import Navbar from '../Navbar/Navbar';
 import UserDetails from '../UserDetails/UserDetails';
-import './UserDashboard.css'
+import './userDashboard.css'
 
 const UserDashboard = ()=>{
     
