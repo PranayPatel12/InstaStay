@@ -15,12 +15,14 @@ function Login() {
     const [showPassword,setShowPassword] = useState(false)
     const [error,setError] = useState(null);
     const [isChecked, setIsChecked] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const [auth,setAuth] = useAuth();
 
     const handleSubmit = async (event)=>{
         event.preventDefault();
         try{
+            setIsLoading(true);
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/auth/api/login`,{
                 email,
                 password,
@@ -32,6 +34,7 @@ function Login() {
               token : response.data?.token,
             })
             localStorage.setItem("auth",JSON.stringify(response.data));
+            setIsLoading(false);
             navigate('/')
         }
         catch(error){
@@ -40,7 +43,15 @@ function Login() {
             // console.log(backendError);
             toast.error(backendError);
         }
-    }   
+    }
+    if(isLoading){
+        return(
+            <div className="d-flex flex-column justify-content-center align-items-center min-vh-100 loader-overlay">
+                <CSpinner />
+            </div>
+        )
+    }
+    
   return (
     <div 
       className="d-flex align-items-center justify-content-center pt-5 pb-5 min-vh-100 min-vw-100 main-container"
