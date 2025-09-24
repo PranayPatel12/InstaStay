@@ -29,6 +29,7 @@ import Discover from "./pages/Discover/Discover";
 import Payment from './pages/Payment/Payment';
 import ThankYou from './pages/ThankYou/ThankYou';
 import Activities from './pages/Activities/Activities';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App(){
   return(
