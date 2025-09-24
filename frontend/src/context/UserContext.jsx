@@ -29,7 +29,7 @@ const AuthProvider = ({children})=>{
         }
         else{
             // console.error("no auth data found in localStorage");
-            toast.error("No data found.");
+            // toast.error("No data found.");
         }
         setIsLoading(false);
     },[]);
