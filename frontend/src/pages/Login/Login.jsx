@@ -44,14 +44,7 @@ function Login() {
             toast.error(backendError);
         }
     }
-    if(isLoading){
-        return(
-            <div className="d-flex flex-column justify-content-center align-items-center min-vh-100 loader-overlay">
-                <CSpinner />
-            </div>
-        )
-    }
-    
+   
   return (
     <div 
       className="d-flex align-items-center justify-content-center pt-5 pb-5 min-vh-100 min-vw-100 main-container"
@@ -61,6 +54,13 @@ function Login() {
         <div className="row justify-content-center">
           <div className="col-10 col-md-5 bg-white rounded shadow p-4 login-container">
             <h2 className="fs-3 fw-semibold text-center mb-4">Login</h2>
+
+              {isLoading &&
+                  ( <div className="d-flex flex-column justify-content-center align-items-center min-vh-100 loader-overlay">
+                <CSpinner />
+                    </div> 
+                  )
+              }
 
             <form onSubmit={handleSubmit} className="form-container">
 
