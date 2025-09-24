@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/UserContext";
 import { FaArrowRight } from "react-icons/fa";
 import login from "../../assets/Login.jpg"
+import {Link} from "react-router-dom"
 
 function Login() {
     const [email,setEmail] = useState("");
@@ -112,9 +113,12 @@ function Login() {
 
             <p className="text-center mt-5">
                 Don't have an account?{" "}
-                    <a href="/signUp" className="no-account">
+                    {/* <a href="/signUp" className="no-account">
                         SignUp
-                    </a>
+                    </a> */}
+                    <Link to="/signUp" className="no-account">
+                        SignUp
+                    </Link>
             </p>
           </div>
         </div>
