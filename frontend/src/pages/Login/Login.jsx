@@ -7,6 +7,7 @@ import { useAuth } from "../../context/UserContext";
 import { FaArrowRight } from "react-icons/fa";
 import login from "../../assets/Login.jpg"
 import {Link} from "react-router-dom"
+import { CSpinner } from "@coreui/react";
 
 function Login() {
     const [email,setEmail] = useState("");
