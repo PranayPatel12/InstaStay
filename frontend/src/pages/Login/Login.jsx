@@ -22,8 +22,9 @@ function Login() {
 
     const handleSubmit = async (event)=>{
         event.preventDefault();
+        setIsLoading(true);
         try{
-            setIsLoading(true);
+            
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/auth/api/login`,{
                 email,
                 password,
@@ -44,6 +45,9 @@ function Login() {
             setIsLoading(false);
             setError(backendError);
             toast.error(backendError);
+        }
+        finally{
+            setTimeOut(() => setIsLoading(false), 300);
         }
     }
    
@@ -118,7 +122,10 @@ function Login() {
                     error && <p className="text-danger">*{error}</p>
                  }
               <div className="mb-2">
-                <button className="w-100 btn btn-dark d-flex justify-content-center align-items-center gap-2" type="submit">
+                <button 
+                    className="w-100 btn btn-dark d-flex justify-content-center align-items-center gap-2" type="submit"
+                    disabled={isLoading} 
+                >
                   Login
                   <span className="text-light"> <FaArrowRight /> </span>
                 </button>
