@@ -1,5 +1,7 @@
 import logo from "../../assets/logo (2).png"
 import "./Footer.css"
+import {Link} from "react-router-dom";
+
 const Footer = ()=>{
     return(
         <footer className="bg-light py-5">
@@ -23,11 +25,11 @@ const Footer = ()=>{
                     <div className="col-6 col-md-3">
                         <h3 className="h6 fw-semibold text-dark mb-3">Company</h3>
                         <ul className="list-unstyled">
-                            <li><a href="/about" className="text-muted text-decoration-none hover-link">About</a> </li>                                        
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Jobs</a> </li>                
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Newsroom</a> </li>                
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Advertising</a> </li>                
-                            <li><a href="/contact-us" className="text-muted text-decoration-none hover-link">Contact Us</a> </li>                
+                            <li><Link to="/about" className="text-muted text-decoration-none hover-link">About</Link> </li>                                        
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Jobs</Link> </li> 
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Newsroom</Link> </li>   
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Advertising</Link> </li>                                        
+                            <li><Link to="/contact-us" className="text-muted text-decoration-none hover-link">Contact</Link> </li>                                        
                         </ul>
                     </div>
 
@@ -35,13 +37,13 @@ const Footer = ()=>{
                     <div className="col-6 col-md-3">
                         <h3 className="h6 fw-semibold text-dark mb-3">Explore</h3>
                         <ul className="list-unstyled">
-                            <li><a href="/category/:india" className="text-muted text-decoration-none hover-link">India</a> </li>
-                            <li><a href="/category/new-zealand" className="text-muted text-decoration-none hover-link">New Zealand</a> </li>
-                            <li><a href="/category/australia" className="text-muted text-decoration-none hover-link">Australia</a> </li>
-                            <li><a href="/category/europe" className="text-muted text-decoration-none hover-link">Europe</a> </li>
-                            <li><a href="/category/usa" className="text-muted text-decoration-none hover-link">United State America (USA)</a> </li>
-                            <li><a href="/category/france" className="text-muted text-decoration-none hover-link">Italy</a> </li>
-                            <li><a href="/" className="text-muted text-decoration-none hover-link">See more</a> </li>
+                            <li><Link to="/category/:india" className="text-muted text-decoration-none hover-link">India</Link></li>
+                            <li><Link to="/category/new-zealand" className="text-muted text-decoration-none hover-link">New Zealand</Link></li>
+                            <li><Link to="/category/australia" className="text-muted text-decoration-none hover-link">Australia</Link></li>
+                            <li><Link to="/category/europe" className="text-muted text-decoration-none hover-link">Europe</Link></li>
+                            <li><Link to="/category/usa" className="text-muted text-decoration-none hover-link">United State America (USA)</Link></li>
+                            <li><Link to="/category/france" className="text-muted text-decoration-none hover-link">Italy</Link></li>
+                            <li><Link to="/" className="text-muted text-decoration-none hover-link">See more</Link></li>
                         </ul>
                     </div>
 
@@ -49,10 +51,10 @@ const Footer = ()=>{
                     <div className="col-6 col-md-3">
                         <h3 className="h6 fw-semibold text-dark mb-3">Terms and Policies</h3>
                         <ul className="list-unstyled">
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Privacy Policy</a></li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Terms of User</a></li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Accessibility</a></li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link"> Reward system policy</a></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Privacy Policy</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Terms of User</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Accessibility</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Reward system policy</Link></li>
                         </ul>
                     </div>
 
@@ -60,12 +62,11 @@ const Footer = ()=>{
                     <div className="col6 col-md-3">
                         <h3 className="h6 fw-semibold text-dark mb-3">Help</h3>
                         <ul className="list-unstyled">
-                            <li><a href="/about" className="text-muted text-decoration-none hover-link">Support</a> </li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Cancel your bookings</a> </li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Use Coupon</a> </li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">Refund Policies</a> </li>
-                            <li><a href="#" className="text-muted text-decoration-none hover-link">International Travel Documents</a> </li>
-
+                            <li><Link to="/about" className="text-muted text-decoration-none hover-link">Support</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Cancel your bookings</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Use Coupon</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">Refund Policies</Link></li>
+                            <li><Link to="#" className="text-muted text-decoration-none hover-link">International Travel Documents</Link></li>
                         </ul>
                     </div>
                 </div>
