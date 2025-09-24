@@ -11,6 +11,7 @@ import { SearchProvider } from './context/Search.jsx';
 import { BookingProvider } from './context/Booking.jsx';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe} from '@stripe/stripe-js';
+import 'react-toastify/dist/ReactToastify.css';
 
 const stripePromise = loadStripe(`${import.meta.env.VITE_BASE_STRIPE_KEY}`)
 createRoot(document.getElementById('root')).render(
