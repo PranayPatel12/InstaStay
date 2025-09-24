@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {toast} from 'react-toastify';
 import {SiGnuprivacyguard} from "react-icons/si";
 import signUp from "../../assets/SignUp.jpg";
+import {Link} from "react-router-dom";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -120,9 +121,9 @@ function SignUp() {
 
             <p className="text-center mt-5">
               Have an account?{" "}
-              <a href="/login" className="no-account">
+              <Link to="/login" className="no-account">
                 Please Login
-              </a>
+              </Link>
             </p>
           </div>
         </div>
