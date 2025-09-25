@@ -155,3 +155,6 @@ Contributing
 
 License
   This project is licensed under the MIT License.
+  
+Preview 
+  https://insta-stay-topaz.vercel.app/
